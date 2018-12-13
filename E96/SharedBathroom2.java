@@ -2,6 +2,13 @@ import java.util.concurrent.locks.Condition;
 import java.util.concurrent.locks.Lock;
 import java.util.concurrent.locks.ReentrantLock;
 
+/*
+Funciona do mesmo modo que o SharedBathroom1, mudando apenas que uso synchronized, provida pelo java ao inves de usar locks.
+Do mesmo jeito que o primeiro, uma pessoa entra no banheiro apenas se alguem do mesmo sexo estiver la dentro ou se o banheiro
+estiver vazio.
+Sempre que alguem sai, notifica todo mundo para verificar se ja pode entrar
+*/
+
 public class SharedBathroom2 {
 	
 	char usando;
