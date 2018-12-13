@@ -2,6 +2,16 @@ import java.util.concurrent.locks.Condition;
 import java.util.concurrent.locks.Lock;
 import java.util.concurrent.locks.ReentrantLock;
 
+/*
+Problema do banheiro compartilhado usando lock (Exercicio 96)
+Para esse problema, dois pessoas de sexos diferentes nao podem entrar no banheiro ao mesmo tempo (Exclusao Mutua) e
+todo mundo eventualmente vai conseguir entrar no banheiro (Starvation-Free)
+Esse codigo satisfaz a Exclusao Mutua porque sempre que uma pessoa quer entrar, ela tem que esperar que alguem do mesmo sexo
+entre ou que nao tenha ninguem no banheiro.
+Starvation-free tambem foi satisfeito ja que, se alguem de sexo oposto ao que esta no banheiro quiser entrar, uma nova pessoa
+do mesmo sexo da pessoa que esta no banheiro nao consegue entrar.
+*/
+
 public class SharedBathroom1 {
 	
 	char usando;
